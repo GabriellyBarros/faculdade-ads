@@ -1,1 +1,26 @@
 
+body{
+    background-color:pink;
+}
+
+h1{
+    font-size:20px;
+}
+
+h2{
+    color:red;
+}
+/* CSS Document */
+/* Propiedades para aformatacao do texto. O texto sera alinhado
+ a direita com a cor azul e fonte Arial */
+
+p{
+   text-align: right;
+   color:blue;
+   font-family: arial;
+}
+
+
+/* Propriedades: color:#11c00;
+background-color:#90cde6;
+background-image(foto.gif);*/
