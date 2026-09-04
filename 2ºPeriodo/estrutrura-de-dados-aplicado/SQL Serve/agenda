@@ -1,1 +1,19 @@
+--CREATE DATABASE BancoUm;
+--USE BancoUm;
+--ALTER DATABASE BancoUm MODIFY NAME = Agenda1;
+
+--CREATE TABLE Pessoal
+--         (Matricula   INTEGER,
+--		  Nome        VARCHAR(50),
+--		  Nascimento  DATE,
+--		  Sexo        CHAR(1),
+--		  Salario     DECIMAL(10,2) );
+
+--ALTER TABLE Pessoal ADD Observacao VARCHAR(200);
+
+--ALTER TABLE Pessoal ALTER COLUMN Observacao VARCHAR(150);
+
+--ALTER TABLE Pessoal DROP COLUMN Observacao;
+
+--DROP TABLE Pessoal;
 
