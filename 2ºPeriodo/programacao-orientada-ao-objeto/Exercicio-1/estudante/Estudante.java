@@ -19,9 +19,16 @@ public class Estudante {
         this.notaMedia = novaNota;
     }
 
-     //Método de aprovação
-    public boolean verificaraprovacao(){
-        return this.notaMedia >=7.0;
+     //Método para verificar situação (retorna se passou ou não)
+    public String verificarSituacao(){
+        if (this.notaMedia >= 7.0){
+            return "Aprovado";
+        }
+        else{
+            return "Reprovado";
+
+        }
+        
     }
     
 }
