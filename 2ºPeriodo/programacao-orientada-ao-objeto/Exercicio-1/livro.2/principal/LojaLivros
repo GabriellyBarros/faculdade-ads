@@ -1,1 +1,51 @@
+package principal;
+
+import acervo.Livro;
+
+import java.util.Scanner;
+
+public class LojaLivros {
+    public static void main(String[] args) {
+        Livro livroProgramacao = new Livro(null, null,
+                null, null, 0, 0, 0.0);
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Digite o titulo do livro:");
+       // String titulo = input.nextLine();
+        livroProgramacao.setTitulo(input.nextLine());
+        System.out.println("O título do livro é : \""+ livroProgramacao.getTitulo() + "\"");
+        // System.out.print("O Autor é :" + livroProgramacao.getAutor() + "\n");
+        // System.out.printf("O ano do livro é: %d e o valor: %.2f" , livroProgramacao.getAnoPublicacao(), livroProgramacao.getValor());
+
+
+        System.out.print("Digite o autor do livro:");
+        livroProgramacao.setAutor(input.nextLine());
+        System.out.println("O autor do livro é : \""+ livroProgramacao.getAutor() + "\"");
+
+        System.out.print("Digite a editora do livro:");
+        livroProgramacao.setEditora(input.nextLine());
+        System.out.println("A editora do livro é : \""+ livroProgramacao.getEditora() + "\"");
+
+        System.out.print("Digite o isbn do livro:");
+        livroProgramacao.setIsbn(input.nextLine());
+        System.out.println("O isbn do livro é :  \"" + livroProgramacao.getIsbn() + "\"");
+
+        System.out.print("Digite o número de páginas do livro:");
+        livroProgramacao.setNumeroPaginas(input.nextInt());
+        System.out.println("O número de páginas do livro é : \""+ livroProgramacao.getNumeroPaginas() + "\"");
+
+
+        System.out.print("Digite o ano de publicação do livro:");
+        livroProgramacao.setAnoPublicacao(input.nextInt());
+        System.out.println("O ano de publicação do livro é :\""+ livroProgramacao.getAnoPublicacao() + "\"");
+
+
+        System.out.print("Digite o valor do livro:");
+        livroProgramacao.setValor(input.nextInt());
+        System.out.println("O valor do livro é : \""+ livroProgramacao.getValor() + "\"");
+
+
+        input.close();
+    }
+}
 
