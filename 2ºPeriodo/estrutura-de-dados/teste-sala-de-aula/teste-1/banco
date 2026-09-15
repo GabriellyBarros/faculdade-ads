@@ -1,1 +1,73 @@
+--CREATE DATABASE Banco12;
+--USE Banco12;
+
+--CREATE TABLE Departamento ( Numero    INTEGER,
+--                            Nome      VARCHAR(50),
+--							  Local     VARCHAR(20),
+--							  Orcamento DECIMAL(12,1) );
+
+--SELECT * FROM Departamento;
+
+--INSERT INTO Departamento 
+--            ( Numero, Nome, Local, Orcamento)
+--VALUES
+--            ( 70, 'Producao', 'Recife', 10000 );
+
+--SELECT * FROM Departamento;
+
+--UPDATE Departamento
+--SET    Nome = 'Pessoal'
+--WHERE  Nome = 'Producao';
+
+--SELECT * FROM Departamento;
+
+--DELETE FROM Departamento
+--WHERE Nome = 'Pessoal';
+
+--SELECT * FROM Departamento;
+
+--INSERT INTO departamento
+--            ( Numero, Nome, Local, Orcamento )
+--VALUES 
+--            ( 10, 'Producao', 'Recife', 15000 ),
+--			  ( 20, 'Contábil', 'Olinda', 30000 ),
+--			  ( 30, 'Contábil', 'Olinda', 40000 ),
+--			  ( 40, 'Contábil', 'Olinda', 50000 );
+
+--SELECT * FROM Departamento;
+
+--UPDATE Departamento
+--SET    Nome = 'Estoque'
+--WHERE  Nome = 'Contábil' AND Oramento >= 35000;
+
+--SELECT * FROM Departamento;
+
+--DELETE FROM departamento
+--WHERE Local = 'Recife' OR  Orcamento >= 40000;
+
+--SELECT * FROM Departamento;
+
+
+--CREATE TABLE Pessoal (Mt_Pessoal INTEGER,
+--                      Nm_Pessoal VARCHAR(50) NOT NULL,
+--					  Sx_Pessoal CHAR(1) DEFAULT('M') );
+
+
+--INSERT INTO Pessoal (Mt_Pessoal, Nm_Pessoal)
+--            VALUES  (1002, 'Jorge' );
+
+--SELECT * FROM Pessoal;
+
+--CREATE TABLE Cargo ( Cd_Cargo INTEGER     PRIMARY KEY,
+--                     Ds_Cargo VARCHAR(50) NOT NULL);
+
+
+--DROP TABLE Pessoal;
+
+--CREATE TABLE Pessoal ( Mt_Pessoal INTEGER PRIMARY KEY,
+--                       Nm_Pessoal VARCHAR(50) NOT NULL,
+--					     Cd_Cargo   INTEGER
+--					                REFERENCES Cargo(Cd_Cargo) ); 
+
+
 
