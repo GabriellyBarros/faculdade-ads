@@ -1,1 +1,43 @@
+--SELECT * FROM Agenda; --Selecionar o Banco Agenda.
 
+
+--SELECT Nome, Profissao FROM Agenda; --Selecionar o nome, profissão do banco Agenda.
+
+--SELECT Profissao FROM Agenda; --Selecionar a profissão do banco Agendas.
+
+--SELECT Nome AS 'Silvana Maria Gonçalves', Profissao AS Medico FROM Agenda; --Selecionar o nome de uma pessoa em especifico e sua profissão no banco Agenda. 
+
+
+
+--SELECT * FROM Agenda WHERE salario < 2000; -- Mostrar os salarios menores que 2000.
+
+--SELECT * FROM Agenda WHERE salario <= 2000; -- Mostrar os salarios menores e iguais a 2000.
+
+--SELECT * FROM Agenda WHERE salario > 2000; --Mostrar os salarios maiores que 2000.
+
+--SELECT * FROM Agenda WHERE salario >= 2000; --Mostrar os salarios maiores e iguais a 2000.
+
+--SELECT * FROM Agenda WHERE salario = 2000; -- Mostrar os salarios iguais a 2000.
+
+--SELECT * FROM Agenda WHERE salario <> 2000; -- Mostrar os salarios menores e maiores que 2000.
+
+
+
+--SELECT * FROM Agenda WHERE Matricula IN (1,3,5,7); --Mostrar todas as matriculas que começam com os números: 1, 3, 5 e 7. 
+
+--SELECT * FROM Agenda WHERE Salario BETWEEN 1500 AND 2000; --Mostrar todos os salarios maiores que 1500 e menores que 2000.
+
+--SELECT Nome FROM Agenda WHERE Nome LIKE '%Silva%'; --Para listar todos o nomes da lista que contenham 'silva'.
+
+--SELECT * FROM Agenda WHERE Salario IS NULL; --Listar todos os salarios da lista que estão nulos.
+
+--SELECT * FROM Agenda WHERE Salario IS NOT NULL; --Listar todos os salarios da lista que não estão nulos. por isso o NOT antes do NULL.
+
+--SELECT Nome FROM Agenda WHERE Nome LIKE '%S'; --Mostrar todos os nomes que começam com a letra 'S'.
+
+--SELECT Nome FROM Agenda WHERE Nome LIKE '__R%'; --Mostrar todos os nomes que contenha a letra 'R' na terceira letra de seu nome.
+
+--SELECT Nome FROM Agenda WHERE Nome LIKE '%SILVA%'; --Mostrar todos os nomes que tenham O nome 'Silva' em qualquer parte do seu nome.EX.: Marisilva, Silvana, Silva.
+
+--SELECT Nome FROM Agenda WHERE ''+Nome+'' LIKE '%SILVA%'; --Mostrar somente os nomes que tenha o 'Silva' isolado, sem nenhuma mistura de letras tipo Marisilva ou Silvania.
+                                                           --Não usar '% Silva %', porque se o nome estiver no começo, antes dele não tem espaço. E se estiver no final, depois dele não tem espaço.
