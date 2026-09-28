@@ -1,1 +1,60 @@
+//Programa-1
 
+#include <stdio.h>
+
+int main(void)
+{
+	int i=0, numero=1, soma=0;
+	while(numero!=0) {
+		printf("Infome o valor %d:", ++i);
+		scanf("%d", &numero);
+		soma += numero;
+	}
+	--i;
+	printf("Media dos %d numeros: %.2f", i, (float) soma/i);
+	return 0;
+}
+
+------------------------------------------------------
+
+//Programa-2
+
+#include <stdio.h>
+
+int main(void) {
+	int i=0, numero=1, soma=0;
+	do{
+		printf("Infome o valor %d:", ++i);
+		scanf("%d", &numero);
+		soma += numero;
+	   }
+	   while(numero!=0);
+	   {
+		--i;
+		printf("Media dos %d numeros: %.2f", i, (float) soma/i);
+	    return 0;
+	   }
+	    
+}
+
+-----------------------------------------------------
+
+//Programa-3
+
+#include <stdio.h>
+
+int main(void)
+{
+	int i=0, numero=1, soma=0;
+	for(i=1; numero!=0; ++i)
+	{
+		printf("Infome o valor %d:", i);
+		scanf("%d", &numero);
+		soma += numero;
+	
+	}
+		
+	i-=2;
+	printf("Media dos %d numeros: %.2f", i, (float) soma/i);
+	return 0;
+}
