@@ -1,1 +1,10 @@
+package model.conta;
 
+public class ContaBeneficio extends Conta{
+    private double bonus;
+
+
+    public ContaBeneficio(String numConta, int agencia, double saldo) {
+        super(numConta, agencia, saldo);
+    }
+}
