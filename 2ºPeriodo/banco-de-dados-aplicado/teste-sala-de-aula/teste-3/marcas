@@ -48,3 +48,4 @@
 
 --SELECT m.nome, c.modelo FROM marcas AS m CROSS JOIN carros AS c; --O CROSS JOIN junta todos os registros de duas tabelas formando um produto cartesiano. Este tipo de junção não permite o uso da cláusula ON.
 
+--SELECT m.nome, c.modelo FROM marcas AS m, carros AS c; --Mostra duas tabelas iguais.
