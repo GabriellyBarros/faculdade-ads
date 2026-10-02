@@ -26,3 +26,25 @@
 --( 'Uno' ,'Fiat' ,2009 ,'branco'),
 --( '207' ,'Peugeot' ,2010 ,'prata' ),
 --( '300 C' ,'Chrysler',2008 ,'verde' );
+
+
+------------------------------------------------------
+
+
+---TIPOS DE JUNÇÂO---
+
+
+--SELECT*FROM marcas;
+
+--SELECT*FROM carros;
+
+--SELECT marcas.nome, carros.modelo FROM marcas INNER JOIN carros ON carros.marca = marcas.marca; --O INNER JOIN junta todos os registros que possuam correspondência nas tabelas relacionais.
+
+--SELECT m.nome, c.modelo FROM marcas AS m LEFT JOIN carros AS c ON c.marca = m.marca; --O LEFT [OUTER] JOIN junta todos os registros da primeira tabela e na segunda,apenas aqueles que possuem relação.
+
+--SELECT m.nome, c.modelo FROM marcas AS m RIGHT JOIN carros AS c ON c.marca = m.marca; --O RIGHT [OUTER] JOIN junta todos os registros da segunda tabela e na primeira,apenas aqueles que possuem relação.
+
+--SELECT m.nome, c.modelo FROM marcas AS m FULL JOIN carros AS c ON c.marca = m.marca; --O FULL [OUTER] JOIN é o equivalente ao uso do LEFT JOIN e RIGHT JOIN juntos,ou seja, mostra todos os registros das duas tabelas, independente de existirem correspondências.
+
+--SELECT m.nome, c.modelo FROM marcas AS m CROSS JOIN carros AS c; --O CROSS JOIN junta todos os registros de duas tabelas formando um produto cartesiano. Este tipo de junção não permite o uso da cláusula ON.
+
