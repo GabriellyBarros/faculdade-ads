@@ -1,0 +1,31 @@
+USE master;
+IF DB_ID('Pedido') IS NOT NULL
+DROP DATABASE Pedido;
+CREATE DATABASE Pedido;
+GO
+USE Pedido;
+--------------------------------------------------------------------------------------
+CREATE TABLE Cliente(
+Cd_Cliente INTEGER IDENTITY(1000,1) PRIMARY KEY,
+Nome VARCHAR(50)
+);
+--------------------------------------------------------------------------------------
+CREATE TABLE Pedido(
+Nr_Pedido INTEGER IDENTITY PRIMARY KEY,
+Data DATE NOT NULL,
+Cd_Cliente INTEGER NOT NULL REFERENCES Cliente(Cd_Cliente)
+);
+--------------------------------------------------------------------------------------
+CREATE TABLE Produto(
+Cd_Produto INTEGER IDENTITY PRIMARY KEY,
+Descricao VARCHAR(50) NOT NULL,
+Preco DECIMAL(10,2) NOT NULL
+);
+--------------------------------------------------------------------------------------
+CREATE TABLE Pedido_Produto(
+Nr_Pedido INTEGER NOT NULL REFERENCES Pedido(Nr_Pedido),
+Cd_Produto INTEGER NOT NULL REFERENCES Produto(Cd_Produto),
+Quantidade INTEGER NOT NULL,
+Preco DECIMAL(10,2) NOT NULL,
+PRIMARY KEY(Nr_Pedido,Cd_Produto)
+);
