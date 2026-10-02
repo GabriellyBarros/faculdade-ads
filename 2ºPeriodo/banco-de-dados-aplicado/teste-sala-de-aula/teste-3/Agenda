@@ -1,1 +1,15 @@
+--SELECT Sexo, COUNT(*) AS 'Qtd.' FROM Agenda GROUP BY Sexo; --Conta a quantidade de pessoas cadastradas, por sexo, na tabela Agenda.
 
+--SELECT Profissao, COUNT(*) AS 'Qtd.' FROM Agenda GROUP BY Profissao,Sexo HAVING Sexo = 'M'; --VAi mostrar a quantidade de pessoas do sexo masculino de cada profissão.
+
+--SELECT Profissao, Nome FROM Agenda ORDER BY Profissao, Nome DESC; --Seleciona as colunas Profissao e Nome, na tabela Agenda, ordenando Profissao em ordem ascendente e Nome em ordem descendente.
+
+--SELECT TOP (3) salario FROM AGenda ORDER BY Salario DESC; --Mostra todos os dados dos três maiores salários na tabela Agenda.
+
+--SELECT*FROM Agenda WHERE Sexo='F'; --Seleciona todas as pessoas com o sexo feminino na tabela Agenda
+
+--SELECT Matricula, Nome FROM Agenda; --Seleciona todos os dados referentes as colunas Matricula e Nome da tabela Agenda.
+
+--SELECT Matricula, Nome FROM Agenda WHERE sexo = 'F'; -- Seleciona todos os dados das colunas Matricula e Nome na tabela Angenda, apenas os empregados do sexo 'F'.
+
+--SELECT Matricula, Nome FRom Agenda ORDER BY Nome ASC; --Seleciona todos os dados da coluna Matricula e Nome, ordenando a coluna nome na ascendente.
