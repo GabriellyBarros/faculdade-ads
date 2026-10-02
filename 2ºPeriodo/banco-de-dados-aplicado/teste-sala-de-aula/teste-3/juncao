@@ -1,1 +1,11 @@
+--SELECT*FROM Empregado, Cargo ; 
 
+--SELECT*FROM Empregado, Cargo WHERE Empregado.Cd_Cargo = Cargo.cd_cargo; --Ligação de tabelas
+
+--SELECT*FROM Empregado UNION SELECT*FROM Empregado2; --União Parcial
+
+--SELECT*FROM Empregado UNION ALL SELECT*FROM Empregado2; --União Total
+
+--SELECT*FROM Empregado INTERSECT SELECT*FROM Empregado2; --Mostra quais dados foram dublicados
+
+--SELECT*FROM Empregado EXCEPT SELECT*FROM Empregado2; 
