@@ -9,12 +9,3 @@
 --SELECT*FROM Empregado INTERSECT SELECT*FROM Empregado2; --Mostra quais dados foram dublicados
 
 --SELECT*FROM Empregado EXCEPT SELECT*FROM Empregado2; 
-
-
--------------------------------------------------------------------------------------
-
-
-
----TIPOS DE JUNÇÂO---
-
-
