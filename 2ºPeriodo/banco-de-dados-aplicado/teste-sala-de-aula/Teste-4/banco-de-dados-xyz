@@ -1,0 +1,117 @@
+--USE master;
+--IF DB_ID('xyz') IS NOT NULL
+--DROP DATABASE xyz;
+--CREATE DATABASE xyz;
+--Go
+--USE xyz;
+
+--CREATE TABLE Cliente(
+--cli_codigo INTEGER     NOT NULL  IDENTITY
+--nome       VARCHAR(50) NOT NULL,
+--PRIMARY KEY(cli_codigo)
+--);
+
+---------------------------------------
+
+--CREATE TABLE PF(
+--cli_cpf   CHAR(11)   NOT NULL,
+--nome      VARCHAR(50) NOT NULL,
+--sexo      CHAR(1)     NOT NULL,
+--cli_codigo INTEGER    NOT NULL,
+--PRIMARY KEY(cli_cpf),
+--FOREIGN KEY(cli_codigo) REFERENCES Cliente(cli_codigo)
+--);
+
+---------------------------------------
+
+--CREATE TABLE PJ(
+--cli_cnpj   CHAR(14)   NOT NULL,
+--razaosocial    VARCHAR(50) NOT NULL,
+--cli_codigo INTEGER    NOT NULL,
+--PRIMARY KEY(cli_cnpj),
+--FOREIGN KEY(cli_codigo) REFERENCES Cliente(cli_codigo)
+--);
+
+--------------------------------------
+
+--CREATE TABLE Fabricante(
+--fab_codigo  INTEGER   NOT NULL,
+--nome    VARCHAR(50) NOT NULL,
+--cli_codigo INTEGER    NOT NULL,
+--PRIMARY KEY(fab_codigo)
+--);
+
+-------------------------------------
+
+--CREATE TABLE Modelo(
+--mod_codigo  INTEGER    NOT NULL,
+--descricao   VARCHAR(50) NOT NULL,
+--fab_codigo  INTEGER     NOT NULL,
+--PRIMARY KEY(mod_codigo),
+--FOREIGN KEY(fab_codigo) REFERENCES Fabricante(fab_codigo) ON DELETE CASCADE
+--);
+
+------------------------------------
+
+--CREATE TABLE Veiculo(
+--vei_placa  CHAR(7)      NOT NULL,
+--cor   VARCHAR(20) NOT NULL,
+--mod_codigo INTEGER    NOT NULL,
+--PRIMARY KEY(vei_placa),
+--FOREIGN KEY(mod_codigo) REFERENCES Modelo(mod_codigo)
+--);
+
+-------------------------------------
+
+--CREATE TABLE OES(
+--oes_numero  INTEGER      NOT NULL,
+--descricao  VARCHAR(50) NOT NULL,
+--data       DATE    NOT NULL,
+--cli_codigo INTEGER NOT NULL,
+--vei_placa CHAR(7)  NOT NULL,
+--PRIMARY KEY(oes_numero),
+--FOREIGN KEY(cli_codigo) REFERENCES  Cliente(cli_codigo),
+--FOREIGN KEY(vei_placa) REFERENCES Veiculo(vei_placa) 
+--);
+
+--------------------------------------
+
+--CREATE TABLE Peca(
+--pec_codigo  INTEGER       NOT NULL,
+--descricao   VARCHAR(50)   NOT NULL,
+--preco       DECIMAL(5,2)  NOT NULL,
+--PRIMARY KEY(pec_codigo)
+--);
+
+-------------------------------------
+
+--CREATE TABLE Servico(
+--ser_codigo  INTEGER       NOT NULL,
+--descricao   VARCHAR(50)   NOT NULL,
+--preco       DECIMAL(5,2)  NOT NULL,
+--PRIMARY KEY(ser_codigo)
+--);
+
+-------------------------------------
+
+--CREATE TABLE OES_Peca(
+--pec_codigo   INTEGER       NOT NULL,
+--oes_numero   INTEGER       NOT NULL,
+--quantidade   INTEGER       NOT NULL,
+--preco        DECIMAL(5,2)  NOT NULL,
+--PRIMARY KEY(pec_codigo, oes_numero),
+--FOREIGN KEY(pec_codigo) REFERENCES  Peca(pec_codigo),
+--FOREIGN KEY(oes_numero) REFERENCES  OES(oes_numero) 
+--);
+
+-------------------------------------
+
+--CREATE TABLE OES_Servico(
+--ser_codigo   INTEGER       NOT NULL,
+--oes_numero   INTEGER       NOT NULL,
+--quantidade   INTEGER       NOT NULL,
+--preco        DECIMAL(5,2)  NOT NULL,
+--PRIMARY KEY(ser_codigo, oes_numero),
+--FOREIGN KEY(ser_codigo) REFERENCES  Servico(ser_codigo),
+--FOREIGN KEY(oes_numero) REFERENCES  OES(oes_numero) 
+--);
