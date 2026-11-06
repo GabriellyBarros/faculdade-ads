@@ -1,1 +1,46 @@
+--USE Fred;
 
+--SELECT*FROM cadfun;
+
+--CREATE OR ALTER TRIGGER Controle on Cadfun FOR INSERT, UPDATE, DELETE AS SELECT * FROM Cadfun;
+
+--INSERT INTO cadfun VALUES (99, 'Teste', '99', 'Testador', 9999.99);
+
+--UPDATE cadfun SET Nome = 'Novo Teste' WHERE codfun = '99';
+
+--DELETE FROM cadfun WHERE codfun = '99';
+
+--SELECT * FROM sysobjects WHERE xtype = 'TR';
+
+--DISABLE TRIGGER Controle ON cadfun; --Desabilita o Triggers
+
+--DROP TRIGGER Controle; --Exclue o Triggers
+
+--CREATE TRIGGER mensagemI ON cadfun FOR INSERT AS PRINT 'Registro(s) incluído(s) com sucesso!';
+
+--CREATE TRIGGER mensagemU ON cadfun FOR UPDATE AS PRINT 'Registro(s) alterado(s) com sucesso!';
+
+--CREATE TRIGGER mensagemD ON cadfun FOR DELETE AS PRINT 'Registro(s) deletado(s) com sucesso!';
+
+--INSERT INTO cadfun VALUES (99, 'Teste', '99', 'Testador', 9999.99);
+
+--UPDATE cadfun SET NOME = 'Novo Teste' WHERE codfun = '99';
+
+--DELETE FROM cadfun WHERE codfun = '99';
+
+--DROP TRIGGER mensagemI, mensagemU, mensagemD;
+
+--CREATE OR ALTER TRIGGER mensagem ON cadfun FOR INSERT, UPDATE, DELETE AS 
+--IF EXISTS(SELECT * FROM inserted)
+--  IF EXISTS(SELECT * FROM deleted)
+--    PRINT 'Registro alterado com sucesso!'
+--	ELSE
+--	PRINT 'Registro incluído com sucesso!'
+--	ElSE 
+--	PRINT 'Registro excluído com sucesso!';
+
+--INSERT INTO cadfun VALUES (99, 'Teste', '99', 'Testador', 9999.99);
+
+--UPDATE cadfun SET NOME = 'Novo Teste' WHERE codfun = '99';
+
+--DELETE FROM cadfun WHERE codfun = '99';
